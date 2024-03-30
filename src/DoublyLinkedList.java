@@ -1,3 +1,21 @@
+/**
+ * The DoublyLinkedList file is a modified version that fixes the add method by
+ * changing minor bugs where the comments suggest below. The remove method then
+ * ensures a node is removed, with both the next and previous methods to keep the
+ * composure of the new list.
+ *
+ * This code then has two method 'printReverse()' and 'printList()' in order to print
+ * the list in order and reversed.
+ *
+ * <p>
+ * Date Last Modified 3/30/2024
+ *
+ * @author Caden VanSickle & Brenden Keahl
+ * <p>
+ * CS1121, Spring 2024
+ * Lab Section 3
+ */
+
 public class DoublyLinkedList implements SimpleList {
     public class Node {
         Integer value = null;

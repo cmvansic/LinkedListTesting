@@ -86,7 +86,23 @@ public class DoublyLinkedList implements SimpleList {
      * For example: [ 1, 2, 4, 8, 16 ]
      */
     public void printList( ) {
-        // YOUR CODE HERE
+        if (head == null) {
+            System.out.println("[]");
+            return;
+        }
+
+        System.out.println("[");
+
+        Node currentNode = head;
+        while (currentNode != null) {
+            System.out.print(currentNode.getValue());
+
+            if (currentNode.getNext() != null) {
+                System.out.println(", ");
+            }
+            currentNode = currentNode.getNext();
+        }
+        System.out.println("]");
     }
 
     /**
@@ -94,8 +110,30 @@ public class DoublyLinkedList implements SimpleList {
      * backwards through the list by following the previous node references.
      */
     public void printReverse( ) {
-        // YOUR CODE HERE
+        if (head == null) {
+            System.out.println("[]");
+            return;
+        }
+
+        Node lastNode = head;
+        while (lastNode.getNext() != null) {
+            lastNode = lastNode.getNext();
+        }
+
+        System.out.print("[");
+
+        Node currentNode = lastNode;
+        while (currentNode != null) {
+            System.out.print(currentNode.getValue());
+            if (currentNode.getPrevious() != null) {
+                System.out.print(", ");
+            }
+            currentNode = currentNode.getPrevious();
+        }
+
+        System.out.println("]");
     }
+
 
     /**
      * Inserts the specified element at the specified position in this list.
